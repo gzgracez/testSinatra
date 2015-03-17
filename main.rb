@@ -1,11 +1,6 @@
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader' if development?
-#set :port, 5000
-
-get '/hello' do
-  "Hello Sinatra!"
-end
 
 get '/' do
   erb :home

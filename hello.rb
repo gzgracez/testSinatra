@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'sinatra'
-require 'sass'
+#require 'sass'
 require 'sinatra/reloader' if development?
 
 get '/' do

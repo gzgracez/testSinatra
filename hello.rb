@@ -1,27 +1,33 @@
 require 'rubygems'
 require 'sinatra'
+require 'sass'
 require 'sinatra/reloader' if development?
-#set :port, 5000
-
-get '/hello' do
-  "Hello Sinatra!"
-end
 
 get '/' do
+  @title = "testSinatra's Home Page!"
   erb :home
 end
 
 get '/test' do
+  @title="testSinatra's Test Page"
   test="test"
   "Hello #{test}"
+  erb :test
 end
 
 get '/reload' do
+  @title="testSinatra's Reload Page"
   test="reload"
   "Hello #{test}"
+  erb :reload
 end
 
-get '/:name' do
-	name = params[:name]
-	"Hi there #{name}!"
+not_found do
+  @title="404 Error"
+  erb :not_found
 end
+
+#get '/:name' do
+#	name = params[:name]
+#	"Hi there #{name}!"
+#end

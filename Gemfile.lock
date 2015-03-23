@@ -5,14 +5,10 @@ GEM
     rack-protection (1.5.3)
       rack
     sass (3.4.13)
-    sinatra (1.3.0)
-      rack (~> 1.3)
-      rack-protection (~> 1.1)
-      tilt (~> 1.3)
-    slim (3.0.3)
-      temple (~> 0.7.3)
-      tilt (>= 1.3.3, < 2.1)
-    temple (0.7.5)
+    sinatra (1.4.5)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
     tilt (1.4.1)
 
 PLATFORMS
@@ -21,4 +17,3 @@ PLATFORMS
 DEPENDENCIES
   sass
   sinatra
-  slim

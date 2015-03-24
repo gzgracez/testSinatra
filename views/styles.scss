@@ -9,3 +9,10 @@ body {
 a {
   color: #00B7FF;
 }
+@media only screen and (max-device-width: 480px) {
+	body {
+	  padding: 50px;
+	  font-family: $body-font;
+	  font-size: 15px;
+	}
+}

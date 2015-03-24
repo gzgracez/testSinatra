@@ -4,7 +4,7 @@ require 'erb'
 require 'sass'
 require 'sinatra/reloader' if development?
 
-get('/styles.css'){ scss :styles, :syntax => :scss, :style => :compressed }
+#get('/styles.css'){ scss :styles, :syntax => :scss, :style => :compressed }
 
 get '/' do
   @title = "testSinatra's Home Page!"

@@ -32,7 +32,7 @@ end
 get '/tasks/:id' do
   @title = Tasks.get(params[:id]).name
   @tasks = Tasks.get(params[:id])
-  slim :show_tasks
+  erb :show_tasks
 end
 
 get '/test' do

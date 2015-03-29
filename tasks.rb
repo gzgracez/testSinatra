@@ -7,7 +7,8 @@ class Tasks
 	include DataMapper::Resource
 	property :id, Serial
 	property :name, String
-	property :time, Date
+	property :date, Date
+	property :details, String
 end
 
 DataMapper.finalize

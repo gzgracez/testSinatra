@@ -15,7 +15,6 @@ end
 get '/tasks' do
   @title="All Tasks"
   @tasks = Tasks.all
-  puts "Tasks" + @tasks.inspect
   erb :tasks
 end
 

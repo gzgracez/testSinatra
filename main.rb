@@ -21,7 +21,7 @@ end
 get '/tasks/new' do
   @title="New Task"
   @tasks = Tasks.new
-  erb :new_tasks
+  erb :new_task
 end
 
 post '/tasks' do
@@ -33,6 +33,19 @@ get '/tasks/:id' do
   @title = Tasks.get(params[:id]).name
   @tasks = Tasks.get(params[:id])
   erb :show_tasks
+end
+
+get '/tasks/:id/edit' do
+  @title = "Edit " + Tasks.get(params[:id]).name
+  @tasks=Tasks.get(params[:id])
+  erb :edit_task
+end
+
+put '/tasks/:id' do
+  @title = "Updated " + Tasks.get(params[:id]).name
+  tasks=Tasks.get(params[:id])
+  tasks.update(params[:tasks])
+  redirect to("/tasks/#{tasks.id}")
 end
 
 get '/test' do

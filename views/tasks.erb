@@ -2,6 +2,10 @@
 	<ul id="tasks">
 		<% @tasks.each do |t| %>
 			<li><a href="/tasks/<%=t.id%>"><%= t.name %></a></li>
+			<ul>
+				<li><%= t.details %></li>
+				<li><%= t.date.strftime('%m/%d/%Y') if t.date %></li>
+			</ul>
 		<% end %>
 	</ul>
 <% else %>

@@ -1,2 +1,3 @@
 <p><%= @tasks.name %></p>
 <p><%= @tasks.details %></p>
+<p><%= @tasks.date.strftime('%m/%d/%Y') if @tasks.date %></p>

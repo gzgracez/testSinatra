@@ -7,7 +7,6 @@ class Tasks
 	include DataMapper::Resource
 	property :id, Serial
 	property :name, String
-	property :date, Date
 	property :details, String
 end
 

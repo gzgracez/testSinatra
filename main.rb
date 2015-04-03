@@ -42,10 +42,16 @@ get '/tasks/:id/edit' do
 end
 
 put '/tasks/:id' do
-  @title = "Updated " + Tasks.get(params[:id]).name
+  @title = "Update " + Tasks.get(params[:id]).name
   tasks=Tasks.get(params[:id])
   tasks.update(params[:tasks])
   redirect to("/tasks/#{tasks.id}")
+end
+
+delete '/tasks/:id' do
+  @title = "Delete " + Tasks.get(params[:id]).name
+  Tasks.get(params[:id]).destroy
+  redirect to("/tasks")
 end
 
 get '/test' do

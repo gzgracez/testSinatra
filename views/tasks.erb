@@ -4,7 +4,7 @@
 			<li><a href="/tasks/<%=t.id%>"><%= t.name %></a></li>
 			<ul>
 				<li><%= t.details %></li>
-				<li><%= t.date.strftime('%m/%d/%Y') if t.date %></li>
+				<li><%= t.date.strftime('%B %e, %Y') if t.date %></li>
 			</ul>
 		<% end %>
 	</ul>

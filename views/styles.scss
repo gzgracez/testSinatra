@@ -46,13 +46,14 @@ ul {
 		}
 	}
 	.divider-vertical {
-		margin: 0 9px;
+		text-align: center;
+		margin: 0 10px;
 		border-right: 1px solid #ccc;
 		border-left: 1px solid #ccc;
 	}
 }
 
-@media screen and (max-device-width: 1024px) {
+@media only screen and (max-width: 1024px) {
 	body {
 	  padding: 30px;
 	  font-family: $body-font;
@@ -75,7 +76,7 @@ ul {
 }
 
 
-@media screen and (max-device-width: 860px) {
+@media only screen and (max-width: 860px) {
 	body {
 	  padding: 30px;
 	  font-family: $body-font;
@@ -97,7 +98,7 @@ ul {
 	}
 }
 
-@media screen and (max-device-width: 560px) {
+@media only screen and (max-device-width: 560px) {
 	body {
 	  padding: 30px;
 	  font-family: $body-font;
@@ -119,7 +120,7 @@ ul {
 	}
 }
 
-@media screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) {
 	body {
 	  padding: 30px;
 	  font-family: $body-font;

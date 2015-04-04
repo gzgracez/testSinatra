@@ -1,4 +1,3 @@
-<p><%= @tasks.name %></p>
 <p><%= @tasks.details %></p>
 <p><%= @tasks.date.strftime('%B %e, %Y') if @tasks.date %></p>
 <form method="post" action="/tasks/<%= @tasks.id %>">

@@ -20,9 +20,9 @@
   </head>
   <body>
   <ul id="navbar">
-      <li><a href="/">Home</a></li>
+      <li><a href="/"<%=" class=\"current\"" if current?%> >Home</a></li>
       <li class="divider-vertical"></li>
-      <li><a href="/tasks">All Tasks</a></li>
+      <li><a href="/tasks"<%=" class=\"current\"" if current?("/tasks")%>>All Tasks</a></li>
       <li class="divider-vertical"></li>
-      <li><a href="/tasks/new">New Task</a></li>
+      <li><a href="/tasks/new"<%=" class=\"current\"" if current?("/tasks/new")%>>New Task</a></li>
    </ul>

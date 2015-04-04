@@ -36,6 +36,11 @@ ul {
 	li {
 		display: inline;
   	text-align: center;
+	  a.current{
+	  	// text-decoration: underline;
+	  	// background: lighten(#fff, 5%);
+	  	font-weight: bold;
+	  }
 		a {
 		  padding: 0px 15px;
 		  text-decoration: none;

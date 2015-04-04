@@ -82,6 +82,12 @@ delete '/tasks/:id' do
   redirect to("/tasks")
 end
 
+helpers do
+  def current?(path='/')
+    (request.path==path || request.path==path+'/') ? "current" : nil
+  end
+end
+
 #get '/:name' do
 #	name = params[:name]
 #	"Hi there #{name}!"

@@ -48,8 +48,8 @@ get '/tasks/new' do
 end
 
 post '/tasks' do
-  tasks = Tasks.create(params[:tasks])
-  redirect to("/tasks/#{tasks.id}")
+  create_task
+  redirect to("/tasks/#{@tasks.id}")
 end
 
 get '/tasks/:id' do
@@ -66,14 +66,14 @@ end
 
 put '/tasks/:id' do
   @title = "Update " + Tasks.get(params[:id]).name
-  tasks=Tasks.get(params[:id])
+  tasks=find_task
   tasks.update(params[:tasks])
   redirect to("/tasks/#{tasks.id}")
 end
 
 delete '/tasks/:id' do
   @title = "Delete " + Tasks.get(params[:id]).name
-  Tasks.get(params[:id]).destroy
+  find_task.destroy
   redirect to("/tasks")
 end
 

@@ -1,7 +1,11 @@
 <%= erb :header%>
     <h1><%= @title || "testSinatra" %></h1>
     <div> 
-    	<%= styled_flash %> 
+    	<%# if !flash[:notice].blank? %>
+				<!-- <div class="notice"> -->
+				  <%#= flash[:notice] %>
+				<!-- </div> -->
+			<%# end %>
       <%= yield %>
     </div>  
 <%= erb :footer%>

@@ -25,6 +25,13 @@ li{
 	margin: 0 0vw;
 }
 
+form{
+	label{
+		display: inline-block;
+		float:left;
+	}
+}
+
 #navbar {
   width: 100%;
   float: left;

@@ -1,6 +1,7 @@
 require 'sinatra'
 require './helpers'
 require './tasks'
+require './file'
 
 #get('/styles.css'){ scss :styles, :syntax => :scss, :style => :compressed }
 
@@ -11,6 +12,29 @@ end
 configure :production do
   DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
+
+
+
+
+
+get '/api' do
+  @title="api"
+  uri = URI.parse("https://www.quandl.com/api/v1/datasets/WIKI/AAPL.csv?auth_token=#$key")
+
+  # Shortcut
+  response = Net::HTTP.get_response(uri)
+
+  # Will print response.body
+  Net::HTTP.get_print(uri)
+
+  # Full
+  # http = Net::HTTP.new(uri.host, uri.port)
+  # response = http.request(Net::HTTP::Get.new(uri.request_uri))
+end
+
+
+
+
 
 get '/' do
   @title = "testSinatra's Home Page!"

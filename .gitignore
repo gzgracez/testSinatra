@@ -3,3 +3,5 @@
 .DS_STORE
 .bundle
 file.txt
+file.rb
+env.rb

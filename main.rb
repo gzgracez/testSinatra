@@ -15,6 +15,7 @@ end
 
 get '/api' do
   @title="api"
+  @key=ENV['key']
   uri = URI.parse("https://www.google.com")
 
   # Shortcut

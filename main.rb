@@ -1,7 +1,6 @@
 require 'sinatra'
 require './helpers'
 require './tasks'
-require './file'
 
 #get('/styles.css'){ scss :styles, :syntax => :scss, :style => :compressed }
 
@@ -15,7 +14,7 @@ end
 
 get '/api' do
   @title="api"
-  @key=ENV['key']
+
   uri = URI.parse("https://www.google.com")
 
   # Shortcut
@@ -23,7 +22,7 @@ get '/api' do
 
   # Will print response.body
   Net::HTTP.get_print(uri)
-
+  response.body
   # Full
   # http = Net::HTTP.new(uri.host, uri.port)
   # response = http.request(Net::HTTP::Get.new(uri.request_uri))

@@ -28,6 +28,17 @@ get '/api' do
   # response = http.request(Net::HTTP::Get.new(uri.request_uri))
 end
 
+get '/api/:q' do
+  @title="api"
+
+  uri = URI.parse("https://www.google.com/webhp?hl=en#hl=en&q=#{params['q']}")
+
+  response = Net::HTTP.get_response(uri)
+
+  Net::HTTP.get_print(uri)
+  response.body
+end
+
 get '/' do
   @title = "testSinatra's Home Page!"
   erb :home

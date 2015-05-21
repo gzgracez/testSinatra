@@ -14,6 +14,10 @@ configure :production do
   DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
 
+get '/testing' do
+  @title="testing"
+end
+
 get '/api' do
   @title="api"
 
